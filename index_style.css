@@ -1,0 +1,462 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+/* Introduction Line text */
+#my_name{
+	color:darkcyan;
+}
+
+
+
+/* About Me Profile Photo */
+.socials-wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	max-width: 900px;
+	margin: 80px 40px 70px 40px;
+	gap: 1rem;
+	padding-inline: 1rem;
+}
+.socials-wrapper * {
+	box-sizing: border-box;
+	flex: 1;
+}
+.profile_photo{
+	display: flex;
+	position:relative;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	aspect-ratio: 7/6;
+}
+
+.profile_photo figure{
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 1rem;
+	width: 100%;
+	height: 100%;
+	background: white;
+	box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.55);
+	transform: rotate(2deg);
+}
+
+.profile_photo figure img {
+	display: block;
+	width: 100%;
+	height: 90%;
+	object-fit: cover;
+	margin: 0;
+	border: 2px rgb(0, 0, 0, 0.55) inset;
+}
+
+.profile_photo figcaption {
+	display: block;
+	width: 100%;
+	font-family: 'Times New Roman'; 
+	text-align: center;
+	margin: 0;
+	font-size: 1rem;
+	color: black;
+}
+
+.profile_photo a{
+	inset: 0;
+	position: absolute;
+	background: none;
+	border: none;
+	transform-origin: bottom left;
+	scale: 1;
+	transition-duration: 200ms;
+}
+
+.profile_photo a:hover{
+	cursor: pointer;
+	scale: 1.1;
+}
+
+.profile_photo a:nth-child(n){
+	 transform: rotate(0deg) translate(0px, -8px);
+}
+
+.profile_photo:hover a:nth-child(1){
+	transform: rotate(-54deg) translate(0px, -8px);
+}
+.profile_photo:hover a:nth-child(2){
+	transform: rotate(-36deg) translate(0px, -8px);
+}
+
+.profile_photo:hover a:nth-child(3){
+	 transform: rotate(-18deg) translate(0px, -8px);
+}
+.profile_photo:hover a:nth-child(4){
+	transform: rotate(0deg) translate(0px, -8px);
+}
+.socials h2{
+	font-size: 28px;
+}
+/* About Me Logos */
+.about_logo{
+	position: absolute;
+	top: 1px;
+	left: 16px;
+	font-size: 20px;
+}
+/* About me photo labels */
+/* Profile photo label */
+.photo_label {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 50%;
+  margin-left: -60px;
+}
+.photo_label::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+figure:hover .photo_label {
+  visibility: visible;
+}
+/* Linkedin label */
+.photo_label1 {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 50%;
+  margin-left: -60px;
+  transform: rotate(18deg);
+}
+.photo_label1::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+figure:hover .photo_label1 {
+  visibility: visible;
+}
+/* Git Hub Label */
+.photo_label2 {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 50%;
+  margin-left: -60px;
+  transform: rotate(34deg);
+}
+.photo_label2::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+figure:hover .photo_label2 {
+  visibility: visible;
+}
+/* Resume Label */
+.photo_label3 {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 50%;
+  margin-left: -60px;
+  transform: rotate(52deg);
+}
+.photo_label3::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+figure:hover .photo_label3 {
+  visibility: visible;
+}
+
+
+
+
+
+/* Fruit */
+.fruit{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+
+}
+.box{
+	width: 150px;
+	height: 150px;
+	font-size: 1.3em;
+	text-align: center;
+	color:beige;
+}
+#apple{
+	background-image:url("Site_images/apple.PNG");
+	background-size: 200px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.box p{
+	margin: 70px 68px 50px 50px;
+}
+#pear{
+	background-image:url("Site_images/pear.PNG");
+	background-size: 195px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#plum{
+	background-image:url("Site_images/plum.PNG");
+	background-size: 200px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#straw{
+	background-image:url("Site_images/strawberry.PNG");
+	background-size: 185px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#orange{
+	background-image:url("Site_images/orange.PNG");
+	background-size: 220px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+
+/* H3 Div on Home the projects part*/
+#project_title {
+	font-size: 2em;
+	margin: 100px 50px 50px 50px;
+}
+
+/* Photo Pile */
+.photo_pile {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	max-width: 100%;
+	margin: 40px 40px 100px 40px;
+}
+.photo_pile figure {
+	display: inline-block;
+	background: white;
+	box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.55);
+	transform: rotate(2deg);
+	margin: 0 -25px;
+}
+
+.photo_pile figure img {
+	max-width: calc(100% - 2rem);
+	margin: 1rem 1rem 0 1rem;
+	border: 2px rgb(0, 0, 0, 0.55) inset;
+}
+.photo_pile figcaption, .popovers figcaption{
+	font-family: 'Times New Roman'; 
+	text-align: center;
+	margin: 0.5rem 1rem 1rem 1rem;
+	font-size: 1rem;
+	color: black;
+}
+.photo_pile button{
+	background: none;
+	border: none;
+	max-width: 40%;
+}
+.photo_pile button:hover, .photo_pile button:focus {
+	z-index: 3;
+	cursor: pointer;
+}
+.photo_pile button:nth-child(2n) {
+	transform: rotate(-10deg);
+}
+.photo_pile button:nth-child(3n){
+	transform: rotate(5deg);
+}
+.photo_pile button:nth-child(4n){
+	transform: rotate(4deg);
+}
+.photo_pile button:nth-child(5n) {
+	transform: rotate(-2deg);
+}
+.photo_pile button:nth-child(6n){
+	transform: rotate(-7deg);
+}
+:popover-open {
+	border: none;
+	box-shadow: 1px 4px 5px rgba(0,0,0,0.55);
+	position: fixed;
+	inset: 0;
+	transform: (-50%, -50%);
+}
+.popover figure:popover-open {
+	display: block;
+	background: white;
+	width: 88vmin;
+}
+.popovers figure:popover-open img {
+	margin: 4vmin 4vmin 0 4vmin;
+	width: 80vmin;
+	border: 4px rgb(0,0,0,0.55) inset;
+}
+
+/* Contact text on top of letter */
+.contact-statement{
+	padding-top: 4pc;
+	text-align: center;
+	font-size: 18px;
+}
+
+/* Test Contact letter on home */
+.wrapper_centered{
+    text-align: center;
+    font-family: monospace;
+    display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+.main_title {
+    color: #4e5e72;
+    font-size: 2rem;
+    font-family: 'Dancing Script';
+}
+/* small {
+    display: block;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+    transition: opacity 0.33s;
+}  */
+textarea, input, #sendLetter {
+    line-height: 1.5rem;
+    border: 0;
+    outline: none;
+    font-family: inherit;
+    appearance: none;
+}
+textarea, input {
+    color: #4e5e72;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgb(229, 225, 187)' x='0' y='23' width='10' height='1'/></svg>");
+}
+textarea {
+    width: 100%;
+    height: 8rem;
+    resize: none;
+}
+input {
+    width: 50%;
+    margin-bottom: 1rem;
+    &[type=text]:invalid, [type=email]:invalid {
+        box-shadow: none;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgba(240, 132, 114, 0.5)' x='0' y='23' width='10' height='1'/></svg>");
+    }
+}
+#sendLetter {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    background-color: rgba(78, 94, 114, 0.9);
+    color: white;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+    &:hover,:focus {
+        outline: none;
+        background-color: rgba(78, 94, 114, 1);
+    }
+}
+input[type=text]:focus, input[type=email]:focus,
+textarea:focus {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgba(78, 94, 114, 0.3)' x='0' y='23' width='10' height='1'/></svg>");
+    outline: none;
+}
+/* .wrapper {
+    width: 35rem;
+    background-color: white;
+}  */
+.letter {
+    position: relative; /* changed from absolute */
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 30rem;
+    margin: 10px 30px 90px 30px;
+    perspective: 60rem;
+}
+.side {
+    height: 12rem;
+    background-color: #fcfcf8;
+    outline: 1px solid transparent;
+    &:nth-of-type(1) {
+        padding: 2rem 2rem 0;
+        border-radius: 1rem 1rem 0 0;
+        box-shadow: inset 0 0.75rem 2rem rgba(229, 225, 187, 0.5);
+    }
+  &.side:nth-of-type(2) {
+    padding: 2rem;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.05), inset 0 -0.57rem 2rem rgba(229, 225, 187, 0.5);
+    text-align: right;
+  }
+}
+
+
+
+
+/* Contact box on home */
+.contact_index{
+	background-color: #f9c93b;
+	width: auto;
+	height: 300px;
+}

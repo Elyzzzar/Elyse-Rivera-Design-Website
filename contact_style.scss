@@ -1,0 +1,509 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+$creme: #f5f4db;
+$rojo: #DC0F00;
+$forest: #2C5A33;
+$olive: #92A400;
+$dark-brown: #402527;
+$honey-brown: #923F00;
+$honey: #FFE27B; 
+$font1: 'EB Garamond', serif;
+
+// =======================================================
+
+//  CONTACT SECTION Letter
+
+// =======================================================
+/* Contact Box background/container */
+.wrapper_centered{
+    // margin-top: 300px;
+    text-align: center;
+    font-family: monospace;
+    // display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: $creme;
+
+  .contact-title{
+    margin-top: 250px;
+    // border: black solid 3px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    // gap: 1em;
+    height: 20px;
+    h2{
+      // border: black solid 3px;
+      position: absolute;
+      color: $forest;
+      font-family: "Henny Penny";
+      font-size: 96px;
+      // font-size: 10vw;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      // left: 20%;
+      // left: 150px;
+      margin-left:auto;
+      margin-right:auto;
+      top: -135px;
+      z-index: 10;
+    }
+    img{
+      // border: black solid 3px;
+      position: absolute;
+      width: 213px;
+      height: 234px;
+      left: 55%;
+      // margin-left:280px;
+      top: -130px;
+      z-index: 1;
+      // display: block;
+      // height: 300px;
+      // width: 50%;
+      // margin: auto;
+    }
+    // @media(max-width: 640px){
+    //   img{
+    //     left: 20%;
+    //     opacity: 0.8;
+    //     // visibility: hidden;
+    //   }
+    // }
+  }
+  .letter-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    .letter {
+        position: relative; /* changed from absolute */
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 35rem;
+        margin: 200px 30px 200px 30px;
+        perspective: 60rem;
+        border: $honey solid 16px;
+        border-radius: 30px;
+        // background-color: $honey;
+  
+      // Small Title on Top
+      .subtitle {
+        color: $dark-brown;
+        font-family: Lora;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        // border: black 3px solid;
+      }
+      // Big title on bottom
+      .main_title {
+          color: $forest;
+          font-family: "EB Garamond";
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          // border: black 3px solid;
+      }
+      /* small {
+          display: block;
+          padding: 1rem 0;
+          font-size: 0.8rem;
+          transition: opacity 0.33s;
+      }  */
+      // Message field, Name/Email Field, & Send Letter Button
+      textarea, input, #sendLetter {
+          line-height: 1.5rem;
+          border: 0;
+          outline: none;
+          font-family: inherit;
+          appearance: none;
+      }
+      // Both Message and Name/Email Field
+      textarea, input {
+          color: #4e5e72;
+          background-color: transparent;
+          background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgb(229, 225, 187)' x='0' y='23' width='10' height='1'/></svg>");
+      }
+      // Message input field
+      textarea {
+          // border: black 3px solid;
+          width: 100%;
+          height: 8rem;
+          resize: none;
+      }
+      // Name and Email field
+      input {
+          // border: limegreen 3px solid;
+          width: 100%;
+          margin-bottom: 1rem;
+          &[type=text]:invalid, [type=email]:invalid {
+              box-shadow: none;
+              background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgba(240, 132, 114, 0.5)' x='0' y='23' width='10' height='1'/></svg>");
+          }
+      }
+      // Send Letter Button
+      #sendLetter {
+          padding: 0.5rem 1rem;
+          border-radius: 0.25rem;
+          background-color: $rojo;
+          color: white;
+          font-size: 1rem;
+          transition: background-color 0.2s;
+          &:hover,:focus {
+              outline: none;
+              background-color: rgba(78, 94, 114, 1);
+          }
+      }
+      input[type=text]:focus, input[type=email]:focus,
+      textarea:focus {
+          background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgba(78, 94, 114, 0.3)' x='0' y='23' width='10' height='1'/></svg>");
+          outline: none;
+      }
+      /* .wrapper {
+          width: 35rem;
+          background-color: white;
+      }  */
+      // Inside letter content title + message + button
+      .side {
+        height: 12rem;
+        background-color: white;
+        outline: 1px solid transparent;
+        &:nth-of-type(1) {
+            padding: 1rem 2rem 0;
+            border-radius: 1rem 1rem 0 0;
+            box-shadow: inset 0 0.75rem 2rem rgba(229, 225, 187, 0.5);
+        }
+        &.side:nth-of-type(2) {
+          padding: 1rem 2rem 0;
+          border-radius: 0 0 1rem 1rem;
+          box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.05), inset 0 -0.57rem 2rem rgba(229, 225, 187, 0.5);
+          // text-align: left;
+        }
+      }
+      .split {
+        // border: purple solid 3px;
+        height: 100%;
+        width: 50%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        overflow-x: hidden;
+        // padding-top: 20px;
+      }
+      .left {
+        left: 0;
+      }
+
+      .right {
+        right: 0;
+      }
+      .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+        text-align: center;
+      }
+      /* Contact box on home */
+      // .contact_index{
+      // 	background-color: #f9c93b;
+      // 	width: auto;
+      // 	height: 300px;
+      // }
+    }
+  }
+}
+
+
+
+/* Contact Form */
+// .contact-container{
+// 	height: 100vh;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: space-evenly;
+// 	border: 2px solid black;
+// }
+
+// .contact-left {
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: start;
+// 	gap: 20px;
+// }
+
+// .contact-left-title h2{
+// 	font-weight: 600;
+// 	color: purple;
+// 	font-size: 40px;
+// 	margin-bottom: 5px;
+// }
+
+// .contact-left-title hr{
+// 	border: none;
+// 	width: 120px;
+// 	height: 5px;
+// 	background-color: purple;
+// 	border-radius: 10px;
+// 	margin-bottom: 20px;
+// }
+
+// .contact-inputs{
+// 	width: 400px;
+// 	height: 50px;
+// 	border: none;
+// 	outline: none;
+// 	padding-left: 25px;
+// 	font-weight: 500;
+// 	color: grey;
+// 	border-radius: 50px;
+// }
+// .contact-left textarea {
+// 	height: 140px;
+// 	padding-top: 15px;
+// 	border-radius: 20px;
+// }
+
+// .cotact-inputs:focus{
+// 	border: 2px solid orange;
+// }
+
+// .contact-inputs::placeholder{
+// 	color: darkcyan;
+// }
+
+// .contact-left button{
+// 	display: flex;
+// 	align-items: center;
+// 	padding: 15px 30px;
+// 	font-size: 16px;
+// 	color: white;
+// 	gap: 10px;
+// 	border: none;
+// 	border-radius: 50px;
+// 	background: linear-gradient(270deg, orange, pink);
+// }
+// .contact-left button img{
+// 	height: 15px;
+// }
+// .contact-right img{
+// 	width: 500px;
+// 	border-radius: 75px;
+// }
+// @media (max-width:800px){
+// 	.contact-inputs{
+// 		width: 80vw;
+// 	}
+// 	.contact-right{
+// 		display: none;
+// 	}
+// }
+
+
+
+// /* Test Contact letter on home */
+// .wrapper_centered{
+//     text-align: center;
+//     font-family: monospace;
+//     display: flex;
+// 	flex-direction: row;
+// 	justify-content: space-evenly;
+// 	flex-wrap: wrap;
+// }
+// .main_title {
+//     color: #4e5e72;
+//     font-size: 2rem;
+//     font-family: 'Dancing Script';
+// }
+// /* small {
+//     display: block;
+//     padding: 1rem 0;
+//     font-size: 0.8rem;
+//     transition: opacity 0.33s;
+// }  */
+// textarea, input, #sendLetter {
+//     line-height: 1.5rem;
+//     border: 0;
+//     outline: none;
+//     font-family: inherit;
+//     appearance: none;
+// }
+// textarea, input {
+//     color: #4e5e72;
+//     background-color: transparent;
+//     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgb(229, 225, 187)' x='0' y='23' width='10' height='1'/></svg>");
+// }
+// textarea {
+//     width: 100%;
+//     height: 8rem;
+//     resize: none;
+// }
+// input {
+//     width: 50%;
+//     margin-bottom: 1rem;
+//     &[type=text]:invalid, [type=email]:invalid {
+//         box-shadow: none;
+//         background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgba(240, 132, 114, 0.5)' x='0' y='23' width='10' height='1'/></svg>");
+//     }
+// }
+// #sendLetter {
+//     padding: 0.5rem 1rem;
+//     border-radius: 0.25rem;
+//     background-color: rgba(78, 94, 114, 0.9);
+//     color: white;
+//     font-size: 1rem;
+//     transition: background-color 0.2s;
+//     &:hover,:focus {
+//         outline: none;
+//         background-color: rgba(78, 94, 114, 1);
+//     }
+// }
+// input[type=text]:focus, input[type=email]:focus,
+// textarea:focus {
+//     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgba(78, 94, 114, 0.3)' x='0' y='23' width='10' height='1'/></svg>");
+//     outline: none;
+// }
+// /* .wrapper {
+//     width: 35rem;
+//     background-color: white;
+// }  */
+// .letter {
+//     position: relative; /* changed from absolute */
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     width: 30rem;
+//     margin: 90px 30px 90px 30px;
+//     perspective: 60rem;
+// }
+// .side {
+//     height: 12rem;
+//     background-color: #fcfcf8;
+//     outline: 1px solid transparent;
+//     &:nth-of-type(1) {
+//         padding: 2rem 2rem 0;
+//         border-radius: 1rem 1rem 0 0;
+//         box-shadow: inset 0 0.75rem 2rem rgba(229, 225, 187, 0.5);
+//     }
+//   &.side:nth-of-type(2) {
+//     padding: 2rem;
+//     border-radius: 0 0 1rem 1rem;
+//     box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.05), inset 0 -0.57rem 2rem rgba(229, 225, 187, 0.5);
+//     text-align: right;
+//   }
+// }
+// =======================================================
+
+// FOOTER SECTION includes navigation + contact + copyright
+
+// =======================================================
+/* Footer */
+.footer {
+	color: white;
+	// border: black solid 3px;
+	font-family: "EB Garamond";
+	font-size: 18px;
+    background: $forest;
+    border-radius: 25px;
+	text-align: center;
+
+	// display: grid;
+	// width: 95%;
+	// margin: 10px;
+	// grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+	// gap: 0px;
+	// padding: 0px;
+    // padding: 20px;
+
+	// Crediting Myself as the sites creator
+	.credit{
+		// border: black solid 3px;
+		text-align: end;
+		padding: 10px 20px 20px 10px;
+		// margin: 10px 10px 200px 10px;
+	}
+	// Footer content wrapper aside from credit
+	.foot_wrap{
+		display: grid;
+		width: 95%;
+		margin: 10px;
+		grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+		gap: 0px;
+		padding: 0px;
+		h2{
+			// border: black solid 3px;
+		}
+		li, p{
+			width: 60%;
+			// border: black solid 3px;
+			text-align:center;
+			font-family: "Lora";
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 50;
+			line-height: normal;
+		}
+		p{
+			margin: auto;
+		}
+		li{
+			margin: 10px 10px 5px 10px;
+		}
+		// Indivdual Section wrapper
+		.column{
+			position: relative;
+			margin: 10px 0px 10px 0px;
+			aspect-ratio: 2.3/3;
+			width: 100%;
+			// border: black solid 3px;
+			// I am unsure on how to make the email center :p
+			#my_email{
+				text-align: end;
+			}
+			#copyright{
+				margin-top: 25px;
+				margin-bottom: 10px;
+			}
+			#rights{
+				margin-bottom: 10px;
+			}
+			.outside_links{
+				// border: black solid 3px;
+				margin: 10px;
+			}
+			.apple_logo{
+				margin: auto;
+				// border: black solid 3px;
+				background: {
+					image: url("Site_images/Apple_Body2.png");
+					size: cover;
+					repeat: no-repeat;
+					position: center;
+				}
+				// height: 130px;
+				// width: 150px;
+				width: 50%;
+				height: 35%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+		// Contact links hover highlight
+		.fa-square-linkedin:hover {
+			color: #84F980 !important;
+		}
+		.fa-square-github:hover {
+			color: #84F980 !important;
+		}
+		.fa-h:hover{
+			color: #84F980 !important;
+		}
+		.fa-file:hover{
+			color: #84F980 !important;
+		}
+	}
+}

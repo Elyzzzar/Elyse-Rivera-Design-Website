@@ -1,0 +1,911 @@
+$creme: #f5f4db;
+$rojo: #DC0F00;
+$forest: #2C5A33;
+$olive: #92A400;
+$dark-brown: #402527;
+$honey-brown: #923F00;
+$font1: 'EB Garamond', serif;
+
+// =======================================================
+
+// ENITIRE PAGE including background
+
+// =======================================================
+body {
+    /* background-image: url("Site_images/field_test.jpg"); */
+	font-family: 'EB Garamond', serif;
+	background-color: #c4d280;
+	background-image: url("Site_images/Custom_Grassy9.PNG");
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position: center center;
+	background-attachment: fixed;
+
+	width: 100%;
+  	height: 100%;
+	margin: 0px;
+	/* background-size: 300px, 200px; */
+  /* Add your background pattern here */
+  	/* background-image: linear-gradient(90deg,rgba(200, 0, 0, 0.5) 50%, transparent 50%),
+    linear-gradient(rgba(200, 0, 0, 0.5) 50%, transparent 50%);
+  	background-size: 50px 50px; */
+
+
+}
+// =======================================================
+
+// MAIN CONTENT AREA contains all of the images/text/etc
+
+// =======================================================
+.main_menu {
+    border-radius: 25px;
+	width: 75%;
+    background-color: $creme;
+	margin-top: 50px;
+	margin-bottom: 50px;
+    margin-left:auto;
+    margin-right: auto;
+	overflow: visible;
+	max-width: 850px;
+}
+// =======================================================
+
+// MAIN BODY main menu wrapper
+
+// =======================================================
+main {
+    text-align: center;
+	overflow: visible;
+	position: relative;
+}
+// =======================================================
+
+// Page Border Pattern
+
+// =======================================================
+#borderimg {
+	// border-image: url("Site_images/picnic_border.png");
+	// border: 40px solid transparent;
+	// width: 75%;
+	// margin: 50px auto;
+	// border-image-slice: 30;
+	// border-image-repeat: round;
+	// border-radius: 25px;
+	// background-repeat: repeat;
+
+	--border-size: 70px;                
+	--background-size: 70px;                
+	--color: rgba(200, 0, 0, 0.5); 
+
+	width: 75%;
+  	margin: 50px auto;
+	// need to give inner main box rounded corners
+  	border-radius: 25px;
+
+  	border: var(--border-size) solid transparent;
+
+	background-image: url("Site_images/picnic_center.png"),linear-gradient(90deg,rgba(200, 0, 0, 0.5) 50%, transparent 50%),
+	linear-gradient(var(--color) 50%, transparent 50%);
+  	background-size: 900px, var(--background-size) var(--background-size), var(--background-size) var(--background-size);
+	background-repeat:
+		repeat,
+		repeat,
+		repeat;
+	background-origin:
+		padding-box,
+		border-box,
+		border-box;
+	background-clip:
+		padding-box,
+		border-box,
+		border-box;
+}
+// =======================================================
+
+// Page highlight 
+
+// =======================================================
+::selection {
+  background: #84F980; 
+  color: #000000;    
+}
+::-moz-selection {
+  background: #84F980;
+  color: #000000;
+}
+// =======================================================
+
+// HEADER SECTION top banner
+
+// =======================================================
+/* Banner */
+.header {
+	border: $creme 10px solid;
+    border-radius: 25px;
+	// padding: 70px;
+    padding: 35px 70px 70px 70px;
+    text-align: center;
+	height: 180px;
+	margin: 0px 0px 0px 0px;
+    color: white;
+	background: {
+		image: url("Site_images/banner_x.JPG");
+		position: {
+			y: center;
+			x: center;
+		}
+		size: cover;
+		position: center; 
+		repeat: no-repeat;
+	}
+	font: {
+		family: 'Henny Penny';
+		style: normal;
+		weight: 400;
+	}
+}
+// Apple Image and Title wrapper
+.title{
+	// border: black 3px solid;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// flex-wrap: wrap;
+	flex-direction: row;
+	gap: 10px;
+}
+// Apple image
+.title img{
+	// border: black 3px solid;
+	// width:  1.7 * 100px;
+	// height: 1.7 * 87.5px;
+	width: 25%;
+	height: 25%;
+	object-fit: cover;
+	object-position: center;
+}
+// Site Title
+.text-box{
+	// border: black 3px solid;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// flex-wrap: wrap;
+	flex-direction: column;
+	h1{
+		// border: black 3px solid;
+		// font-size: 2.4em;
+		font-size: 3vw;
+		letter-spacing: 1px;
+		margin: 0px 0px 0px 0px;
+	}
+	img{
+		// width: 266.097px;
+		// height: 28px;
+		width: 60%;
+		width: 60%;
+	}
+	p{
+		// border: black 3px solid;
+		font-size: 4vw;
+		// font-size: 62px;
+		margin: 0px 0px 0px 0px;
+	}
+}
+// Media Q Title Stage 1
+@media(max-width: 840px){
+  .title img{
+	width: 40%;
+	height: 40%;
+  }
+  .text-box h1{
+	font-size: 5vw;
+  }
+  .text-box p{
+	font-size: 6vw;
+  }
+  .text-box img{
+	width: 100%;
+	width: 100%;
+  }
+}
+// Media Q Title Stage 2
+@media(max-width: 640px){
+  .title img{
+	width: 50%;
+	height: 50%;
+  }
+  .text-box h1{
+	font-size: 6vw;
+  }
+  .text-box p{
+	font-size: 7vw;
+  }
+  .text-box img{
+	width: 100%;
+	width: 100%;
+  }
+}
+// =======================================================
+
+// NAVBAR
+
+// =======================================================
+/* navbar wrapper */
+.navbar {
+    overflow: hidden;
+    background-color: transparent;
+	padding: 10px 20px 0px 20px;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+	overflow-x: auto;
+}
+// navbar links
+.navbar a{
+    border-radius:20px 20px 0 0;
+	// border: 3px solid $creme;
+	flex-shrink: 0;
+	scrollbar-width:thin;
+    display:block;
+    color: $creme;
+    text-align: center;
+    padding:14px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: $rojo;
+	transition: all 0.4s ease;
+	translate: 0 1rem;
+	height: 2.5rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+// Navbar social media links
+.navbar a.right{
+    float:right;
+	background-color: $creme;
+	color: $forest;
+}
+
+// Navbar Hover effect
+.navbar a:hover{
+    // background-color: #ddd;
+    color:black;
+	translate: 0;
+}
+
+// .navbar a:visited{
+// 	background-color: $rojo;
+// }
+
+ /* Tab colors*/
+#home{
+	background-color: $forest;
+	&.current{
+    	background-color: $rojo;
+	}
+}
+#portfolio{
+	background-color: $olive;
+	&.current{
+    	background-color: $rojo;
+	}
+}
+#about{
+	background-color: $forest;
+	&.current{
+    	background-color: $rojo;
+	}
+}
+#resume{
+	background-color: $olive;
+	&.current{
+    	background-color: $rojo;
+	}
+}
+#contact{
+	background-color: $forest;
+	&.current{
+    	background-color: $rojo;
+	}
+}
+
+/* Line at top of the page */
+.line{
+	background-color: $rojo;
+	height: 15px;
+}
+.line1{
+	background-color: $rojo;
+	height: 13px;
+}
+.line2{
+	background-color: $rojo;
+	height: 13px;
+}
+.line3{
+	background-color: $rojo;
+	height: 13px;
+}
+.line4{
+	background-color: $rojo;
+	height: 13px;
+}
+// =======================================================
+
+// OPENING SECTION my personal introduction
+
+// =======================================================
+// opening section
+.page-body{
+	background-color: $creme;
+	margin: 0px 0px 0px 0px;
+	height: 300px;
+	border-radius: 25px;
+	overflow:hidden;
+	box-shadow: 0 5.006px 5.006px 0 rgba(0, 0, 0, 0.25);
+}
+// =======================================================
+
+// FOOTER SECTION includes navigation + contact + copyright
+
+// =======================================================
+/* Footer */
+.footer {
+	color: white;
+	// border: black solid 3px;
+	font-family: "EB Garamond";
+	font-size: 18px;
+    background: $forest;
+    border-radius: 25px;
+	text-align: center;
+
+	// display: grid;
+	// width: 95%;
+	// margin: 10px;
+	// grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+	// gap: 0px;
+	// padding: 0px;
+    // padding: 20px;
+
+	// Crediting Myself as the sites creator
+	.credit{
+		// border: black solid 3px;
+		text-align: end;
+		padding: 10px 20px 20px 10px;
+		// margin: 10px 10px 200px 10px;
+	}
+	// Footer content wrapper aside from credit
+	.foot_wrap{
+		display: grid;
+		width: 95%;
+		margin: 10px;
+		grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+		gap: 0px;
+		padding: 0px;
+		h2{
+			// border: black solid 3px;
+		}
+		li, p{
+			width: 60%;
+			// border: black solid 3px;
+			text-align:center;
+			font-family: "Lora";
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 50;
+			line-height: normal;
+		}
+		p{
+			margin: auto;
+		}
+		li{
+			margin: 10px 10px 5px 10px;
+		}
+		// Indivdual Section wrapper
+		.column{
+			a{
+				color: white;
+			}
+			position: relative;
+			margin: 10px 0px 10px 0px;
+			aspect-ratio: 2.3/3;
+			width: 100%;
+			// border: black solid 3px;
+			// I am unsure on how to make the email center :p
+			#my_email{
+				text-align: end;
+			}
+			#copyright{
+				margin-top: 25px;
+				margin-bottom: 10px;
+			}
+			#rights{
+				margin-bottom: 10px;
+			}
+			.outside_links{
+				// border: black solid 3px;
+				margin: 10px;
+			}
+			.apple_logo{
+				margin: auto;
+				// border: black solid 3px;
+				background: {
+					image: url("Site_images/Apple_Body2.png");
+					size: cover;
+					repeat: no-repeat;
+					position: center;
+				}
+				// height: 130px;
+				// width: 150px;
+				width: 50%;
+				height: 35%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+		// Contact links hover highlight
+		.fa-square-linkedin:hover {
+			color: #84F980 !important;
+		}
+		.fa-square-github:hover {
+			color: #84F980 !important;
+		}
+		.fa-h:hover{
+			color: #84F980 !important;
+		}
+		.fa-file:hover{
+			color: #84F980 !important;
+		}
+	}
+}
+
+// @media screen and (max-width: 200px) {
+//   .footer {
+//     flex-direction: column;
+//   }
+// }
+
+
+
+
+
+
+
+
+
+// =======================================================
+
+// ADDITIONAL DECORATIONS includes food + grass + ants
+
+// =======================================================
+/* Tester margin food images */
+.picnic-container{
+	position: relative;
+	width: 100%;
+}
+
+#picnic{
+	display: block;
+	position: absolute;
+	width: 40%;
+	left: -30%;
+	top: -10rem;
+	transform: rotate(20deg);
+}
+
+#pie{
+	display: block;
+	position: absolute;
+	width: 34%;
+	left: -25%;
+	top: -50rem;
+	transform: rotate(20deg);
+}
+
+#chac{
+	display: block;
+	position: absolute;
+	width: 40%;
+	right: -25%;
+	top: -100rem;
+	transform: rotate(20deg);
+}
+
+#picnic:hover{
+	transform: rotate(30deg);
+} 
+#pie:hover{
+	transform: rotate(30deg);
+}
+#chac:hover{
+	transform: rotate(30deg);
+}
+/* .picnic-body{
+	width: 60%;
+} */
+
+
+
+/* Grass */
+.grass-container{
+	position: relative;
+	width: 100%;
+}
+
+#grass{
+	display: block;
+	position: absolute;
+	width: 34%;
+	left: -2%;
+	bottom: -11.7rem;
+}
+
+#grass2{
+	display: block;
+	position: absolute;
+	width: 34%;
+	left: 33%;
+	bottom: -11.7rem;
+}
+
+#grass3{
+	display: block;
+	position: absolute;
+	width: 34%;
+	left: 68%;
+	bottom: -11.7rem;
+}
+
+#grass4{
+	display: block;
+	position: absolute;
+	width: 12%;
+	left: -2.6rem;
+	bottom: -10rem;
+	transform: rotate(90deg);
+}
+
+
+/* Flowers */
+.flowers-container{
+	position: relative;
+	width: 100%;
+}
+
+#flower{
+	display: block;
+	position: absolute;
+	width: 20%;
+	left: -1%;
+	bottom: -11.7rem;
+}
+
+#flower2{
+	display: block;
+	position: absolute;
+	width: 12%;
+	left: 25%;
+	bottom: -11.7rem;
+}
+
+#flower3{
+	display: block;
+	position: absolute;
+	width: 12%;
+	left: 55%;
+	bottom: -11.7rem;
+}
+
+#flower4{
+	display: block;
+	position: absolute;
+	width: 12%;
+	left: 85%;
+	bottom: -11.7rem;
+}
+
+/* Ants */
+.ants-container{
+	position: relative;
+	width: 100%;
+}
+
+#ants{
+	display: block;
+	position: absolute;
+	width: 10%;
+	left: -18.6rem;
+	top: -33.5rem;
+}
+
+#ants2{
+	display: block;
+	position: absolute;
+	width: 10%;
+	left: -6.5rem;
+	top: -20rem;
+}
+
+
+
+#div1 {
+	position: relative;
+	border: 1px solid blue;
+	perspective: 100px;
+}
+
+#div2{
+	inset: 0;
+	z-index: -1;
+	position: absolute;
+	border: 1px solid black;
+	/* background-image: linear-gradient(90deg,rgba(200, 0, 0, 0.5) 50%, transparent 50%),linear-gradient(rgba(200, 0, 0, 0.5) 50%, transparent 50%); */
+	background-image:linear-gradient(90deg,rgba(200, 0, 0, 0.5) 50%, transparent 50%),
+	linear-gradient(rgba(200, 0, 0, 0.5) 50%, transparent 50%), linear-gradient(beige, beige);
+	background-size: 50px 50px;
+	transform-style: preserve-3d;
+	transform: rotateX(45deg);
+}
+
+
+
+
+
+/* That Random Tab Thing */
+fieldset {
+	--gap: 9px;
+	position: absolute;
+	top: calc(20px - var(--gap));
+	right: -5px;
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: 40px;
+
+	legend {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 0;
+	}
+
+	input {
+		position: absolute;
+		opacity: 0;
+		pointer-events: 0;
+	}
+
+	label {
+		position: relative;
+		display: block;
+		width: 40px;
+		height: 30px;
+		background: var(--bg-color);
+		margin: var(--gap) 0;
+		border-top-left-radius: 2px;
+		border-top-right-radius: 2px;
+		border-bottom-left-radius: 2px;
+		font-size: 0;
+		box-shadow: -2px 1px 3px rgba(0 0 0 / 0.2);
+		cursor: pointer;
+		transform: translate(0, 0) scaleX(1);
+		transform-origin: left center;
+		filter: brightness(90%);
+		transition-property: transform filter;
+		transition-duration: 0.2s;
+		transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+
+		&:hover {
+			transform: translate(0, 0) scaleX(1.25);
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			right: 0;
+			width: 0;
+			height: 0;
+			border-top: 5px solid var(--bg-color);
+			border-right: 5px solid transparent;
+			border-left: 0px solid transparent;
+			border-bottom: 5px solid transparent;
+			filter: brightness(62%);
+			transition-property: border-right filter;
+			transition-duration: 0.2s;
+			transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+		}
+
+		&:hover:after {
+			border-right: 12px solid transparent;
+		}
+	}
+
+	input:checked + label,
+	input:focus + label {
+		transform: translate(0, 0) scaleX(1.25);
+		filter: brightness(100%);
+
+		&:after {
+			border-right: 12px solid transparent;
+			filter: brightness(50%);
+		}
+	}
+
+	label:nth-of-type(1) {
+		--bg-color: #f3b2af;
+	}
+
+	label:nth-of-type(2) {
+		--bg-color: #b1f4fd;
+	}
+
+	label:nth-of-type(3) {
+		--bg-color: #d5fec5;
+	}
+
+	label:nth-of-type(4) {
+		--bg-color: #feffbe;
+	}
+
+	label:nth-of-type(5) {
+		--bg-color: #f9d7ac;
+	}
+}
+
+
+
+
+
+/*
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position:sticky;
+    position: -webkit-stick;
+    top: 0;
+}
+
+.navbar a{
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+
+}
+
+.navbar button{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  
+}
+
+.navbar button.social1{
+    float: right;
+}
+.navbar button.social2{
+    float: right;
+}
+
+.links li a{
+    border-radius: 25px;
+    display: block;
+    color: beige;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+} 
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: green;
+}
+
+.socials button{
+    margin-left: 10px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+.social1{
+    background-color: green;
+    color: white;
+}
+
+.social2{
+    background-color: blue;
+    color: White;
+}
+
+*/
+
+/* Attempt 1 of Fruit */
+/* .apple{
+	background-image:url("Site_images/apple.PNG"), url("Site_images/pear.PNG");
+	background-size: 250px;
+	background-repeat: no-repeat;
+	background-position: right top, left top;
+	border: solid 10px black;
+	padding: 25px;
+	width: auto;
+    height: 10rem;
+	margin: 100px 20px 20px 20px; 
+
+} */
+
+
+
+
+
+// footer og
+// .footer {
+// 	color: white;
+// 	border: black solid 3px;
+// 	font-family: "EB Garamond";
+// 	font-size: 18px;
+//     background: $forest;
+//     border-radius: 0 0 25px 25px;
+// 	text-align: center;
+
+// 	display: flex;
+// 	flex-direction: row;
+// 	align-items: flex-start;
+//     // padding: 20px;
+
+// 	h2{
+// 		border: black solid 3px;
+// 	}
+// 	li, p{
+// 		width: 60%;
+// 		border: black solid 3px;
+// 		text-align: center;
+// 		font-family: "Lora";
+// 		font-size: 14px;
+// 		font-style: normal;
+// 		font-weight: 50;
+// 		line-height: normal;
+// 	}
+
+// 	.column{
+// 		width: 100%;
+// 		border: black solid 3px;
+// 		.apple_logo{
+// 			border: black solid 3px;
+// 			background: {
+// 				image: url("Site_images/Apple_Body2.png");
+// 				size: cover;
+// 				repeat: no-repeat;
+// 				position: center;
+// 			}
+// 			height: 130px;
+// 			width: 150px;
+// 		}
+// 	}
+// 	.fa-square-linkedin:hover {
+//     	color: #84F980 !important;
+// 	}
+// 	.fa-square-github:hover {
+// 		color: #84F980 !important;
+// 	}
+// 	.fa-h:hover{
+// 		color: #84F980 !important;
+// 	}
+// 	.fa-file:hover{
+// 		color: #84F980 !important;
+// 	}
+
+// }
